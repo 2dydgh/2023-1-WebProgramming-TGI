@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import Frame from './components/Frame/frame.jsx';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Calendar from './pages/Calendar/calendar';
 import Subway from './pages/Subway/subway.jsx';
 import Weather from './pages/Weather/weather.jsx';
 import Calculator from './pages/Calculator/calculator';
 import { Landing } from './pages/Landing/landing';
 import AboutUs from './pages/About/aboutUs';
-import NotFound from './NotFound.jsx'; // 404 컴포넌트를 임포트하세요
+import LandingMAin from './pages/Landing/landingMain';
+import NotFound from './pages/NotFound/NotFound.jsx'; // 404 컴포넌트를 임포트하세요
 
 // 404화면을 어떻게 꾸밀지?
 
@@ -17,11 +18,17 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Landing />,
+
     errorElement: <NotFound />, // 404 컴포넌트를 errorElement로 지정합니다.
     children: [
       {
+        path: '/',
+        element: <LandingMAin />,
+      },
+      {
         path: '/aboutUs',
         element: <AboutUs />,
+        errorElement: <NotFound />, // 404 컴포넌트를 errorElement로 지정합니다.
       },
     ],
   },

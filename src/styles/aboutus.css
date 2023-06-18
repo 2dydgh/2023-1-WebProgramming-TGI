@@ -1,0 +1,48 @@
+.team-page {
+  text-align: center;
+  padding: 20px;
+  background-color: #d8a14e;
+}
+
+.page-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #46290d;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 20px;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  font-size: 1vw;
+  color: #46290d;
+  padding-bottom: 10%;
+}
+
+.member-name {
+  font-size: 1.5vw !important;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.member-role {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.member-intro {
+  color: #555555;
+  margin-bottom: 5px;
+}
